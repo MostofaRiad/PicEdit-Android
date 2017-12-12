@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="45dp">
+    <TextView
+        android:id="@+id/text_item_font"
+        android:gravity="center_vertical"
+        android:text="Font"
+        android:textColor="@color/colorBarMain"
+        android:textSize="9pt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+</LinearLayout>

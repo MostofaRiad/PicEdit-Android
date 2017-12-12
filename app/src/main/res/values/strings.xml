@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PalPic</string>
+    <string name="back">Back</string>
+    <string name="crop">Crop</string>
+    <string name="next">Next</string>
+    <string name="resume">Resume</string>
+    <string name="custom">CUSTOM</string>
+    <string name="square">SQUARE</string>
+    <string name="ratio23">2:3</string>
+    <string name="ratio34">3:4</string>
+    <string name="ratio35">3:5</string>
+    <string name="ratio916">9:16</string>
+    <string name="ratio32">3:2</string>
+    <string name="ratio43">4:3</string>
+    <string name="ratio53">5:3</string>
+    <string name="ratio169">16:9</string>
+    <string name="ratio1911">1.91:1</string>
+    <string name="filter">Filter</string>
+    <string name="finish_up">Finish Up</string>
+    <string name="save_share">Save &amp; Share</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="facebook_login">Facebook</string>
+    <string name="com_facebook_loginview_log_in_button">Sign in</string>
+    <string name="facebook_app_id">1838829683012532</string>
+    <string name="server_client_id">901417566407-f8mghhmoeur6b0prcdrra77m8f42513p.apps.googleusercontent.com</string>
+    
+    <string name="banner_ad_unit_id">ca-app-pub-9318863419427951/4191323822</string>
+</resources>

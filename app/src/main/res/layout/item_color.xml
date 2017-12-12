@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="60dp"
+    android:background="@color/colorClear"
+    android:gravity="center"
+    android:layout_height="90dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/item_color_layer"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:background="@color/colorWhite">
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_finish_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
+    android:fitsSystemWindows="true"
+    android:windowSoftInputMode="adjustPan"
+    tools:context="com.allyouneedapp.palpicandroid.FinishUpActivity">
+    <RelativeLayout
+        android:isScrollContainer="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:fitsSystemWindows="false">
+
+        <RelativeLayout
+            android:id="@+id/layout_nav_finish"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <Button
+                android:id="@+id/btn_back_finish"
+                android:layout_width="60dp"
+                android:background="@color/colorClear"
+                android:text="@string/back"
+                android:textColor="@color/colorNavItemTextPressed"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/finish_up"
+                android:textColor="@color/colorWhite"
+                android:textSize="9pt"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/btn_dismiss_finish"
+                android:layout_width="60dp"
+                android:text="@string/dismiss"
+                android:visibility="gone"
+                android:background="@color/colorClear"
+                android:textColor="@color/colorNavItemText"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"/>
+            <Button
+                android:id="@+id/btn_save_share_finish"
+                android:layout_width="wrap_content"
+                android:text="@string/save_share"
+                android:background="@color/colorClear"
+                android:textColor="@color/colorNavItemText"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+        <!--edit views-->
+        <ImageView
+            android:id="@+id/image_view_for_size"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="110dp"
+            android:layout_above="@+id/layout_bottom_bar_finish"
+            android:layout_below="@+id/layout_nav_finish"
+            tools:ignore="contentDescription"
+            android:adjustViewBounds="true"/>
+
+        <LinearLayout
+            android:id="@+id/layout_edit_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="110dp"
+            android:layout_above="@+id/layout_bottom_bar_finish"
+            android:layout_below="@+id/layout_nav_finish">
+        </LinearLayout>
+
+        <!--bottom bar menus-->
+        <RelativeLayout
+            android:id="@+id/layout_bottom_bar_finish"
+            android:layout_width="match_parent"
+            android:background="@color/colorBackgroundMain"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/btn_filter_finish"
+                android:background="@color/colorClear"
+                android:src="@mipmap/filter"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Filter"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textSize="6pt"
+                android:layout_marginBottom="10dp"
+                android:layout_alignBaseline="@+id/btn_rotate"
+                android:textColor="@color/colorWhite"/>
+
+            <ImageButton
+                android:id="@+id/btn_addsticker_finish"
+                android:background="@color/colorClear"
+                android:src="@mipmap/addsticker"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Add sticker"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textSize="6pt"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"/>
+            <ImageButton
+                android:id="@+id/btn_add_word_finish"
+                android:layout_alignParentRight="true"
+                android:background="@color/colorClear"
+                android:src="@mipmap/addword"
+                android:scaleType="fitXY"
+                android:padding="5dp"
+                android:layout_width="90dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Add word"
+                android:textSize="6pt"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+
+        <!--<search bar & layout Listview>-->
+        <LinearLayout
+            android:id="@+id/layout_list"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:layout_below="@+id/layout_nav_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+            </android.support.v7.widget.SearchView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ListView
+                    android:id="@+id/listView_font"
+                    android:divider="@color/colorDividerLine"
+                    android:dividerHeight="1dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:windowSoftInputMode="adjustResize">
+                </ListView>
+                <GridView
+                    android:id="@+id/gridView_sticker"
+                    android:numColumns="2"
+                    android:background="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </GridView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--recycler view layouts-->
+        <LinearLayout
+            android:id="@+id/layout_font_color_finish"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_above="@+id/layout_bottom_bar_finish"
+            android:background="@color/colorClear">
+            <ImageButton
+                android:id="@+id/btn_bar_font_finish"
+                android:src="@mipmap/fontedit"
+                android:scaleType="centerInside"
+                android:background="@color/colorFontButton"
+                android:layout_gravity="bottom"
+                android:layout_width="80dp"
+                android:layout_height="90dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/bar_color_finish"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_recent_finish"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_above="@+id/layout_bottom_bar_finish"
+            android:background="@color/colorBarMain">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Recent"
+                android:paddingLeft="10dp"
+                android:background="@color/colorLightWhite"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/bar_recent_finish"
+                android:background="@color/colorWhite"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <!--input text views-->
+        <RelativeLayout
+            android:id="@+id/layout_input_text"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="280dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/text_input_text"
+                    android:layout_width="match_parent"
+                    android:background="#8F000000"
+                    android:layout_height="60dp"
+                    android:paddingLeft="5dp"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="top|left"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@color/colorItem28"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/btn_input_text_done"
+                        android:layout_width="80dp"
+                        android:text="DONE"
+                        android:background="@color/colorClear"
+                        android:layout_gravity="right"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--save and share views-->
+        <LinearLayout
+            android:id="@+id/layout_save_share_finish"
+            android:orientation="vertical"
+            android:background="@mipmap/dim_popup"
+            android:layout_below="@+id/layout_nav_finish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#99000000"
+                android:layout_height="0dp"
+                android:layout_weight="25">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:background="#99000000"
+                android:layout_height="0dp"
+                android:layout_weight="50">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/text_saved_image_finish"
+                            android:textColor="@color/colorWhite"
+                            android:text="picture has been saved to your photo album"
+                            android:gravity="center"
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp" />
+                        <TextView
+                            android:id="@+id/text_shared_your_friend_finish"
+                            android:layout_below="@+id/text_saved_image_finish"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="center"
+                            android:text = "SHARE WITH YOUR FRIENDS"
+                            android:layout_marginBottom="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="50">
+                            <ImageButton
+                                android:id="@+id/btn_fb_finish"
+                                android:background="@color/colorClear"
+                                android:src="@mipmap/facebook_white"
+                                android:scaleType="fitCenter"
+                                android:padding="5dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                            <ImageButton
+                                android:id="@+id/btn_insta_finish"
+                                android:background="@color/colorClear"
+                                android:src="@mipmap/instagram"
+                                android:scaleType="fitCenter"
+                                android:padding="5dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                            <ImageButton
+                                android:id="@+id/btn_email_finish"
+                                android:background="@color/colorClear"
+                                android:src="@drawable/email_white"
+                                android:scaleType="fitCenter"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:padding="5dp"
+                                android:layout_marginRight="30dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/text_or_finish"
+                            android:text="OR"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="30"/>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="60">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageButton
+                                        android:id="@+id/btn_suggestSticker_finish"
+                                        android:background="@color/colorClear"
+                                        android:src="@mipmap/sticker_white"
+                                        android:scaleType="fitCenter"
+                                        android:layout_centerHorizontal="true"
+                                        android:adjustViewBounds="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        android:textColor="@color/colorWhite"
+                                        android:text="Suggest Sticker"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center|top"
+                                        android:layout_marginBottom="0dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ImageButton
+                                        android:id="@+id/btn_start_over_finish"
+                                        android:background="@color/colorClear"
+                                        android:src="@mipmap/startover"
+                                        android:scaleType="fitCenter"
+                                        android:layout_centerHorizontal="true"
+                                        android:adjustViewBounds="true"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent" />
+                                    <TextView
+                                        android:layout_alignBottom="@+id/btn_start_over_finish"
+                                        android:textColor="@color/colorWhite"
+                                        android:text="Start Over"
+                                        android:gravity="center|top"
+                                        android:layout_marginBottom="0dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp" />
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#99000000"
+                android:layout_height="0dp"
+                android:layout_weight="30">
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--login register views-->
+        <LinearLayout
+            android:id="@+id/layout_register_login_finish"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@mipmap/dim_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30">
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="45">
+
+                <EditText
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/text_email_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/roundedtext"
+                    android:hint="E-mail address"/>
+
+                <EditText
+                    android:id="@+id/text_password_finish"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/text_email_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:inputType="textPassword"
+                    android:background="@drawable/roundedtext"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Password"/>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/text_password_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/btn_register_finish"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/roundedbutton"
+                        android:shadowRadius="20"
+                        android:text="register"/>
+                    <Button
+                        android:id="@+id/btn_login_finish"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:text="Log in"
+                        android:background="@drawable/roundedbutton"
+                        android:layout_centerHorizontal="true"/>
+                    <Button
+                        android:id="@+id/btn_cancel_finish"
+                        android:layout_width="90dp"
+                        android:layout_height="35dp"
+                        android:text="Cancel"
+                        android:background="@drawable/roundedbutton"
+                        android:layout_alignParentRight="true"/>
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/btn_fb_login_finish"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitCenter"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"
+                        android:layout_alignParentBottom="true"/>
+                    <com.google.android.gms.common.SignInButton
+                        android:id="@+id/btn_google_finish"
+                        android:layout_width="145dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/glogin"
+                        android:scaleType="fitCenter"
+                        android:background="@color/colorClear"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:text="or connect with your account"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--suggest sticker views-->
+        <LinearLayout
+            android:id="@+id/layout_suggest_sticker_logged_finish"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@mipmap/dim_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30">
+                <EditText
+                    android:id="@+id/edit_text_suggest_sticker_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/roundedtext"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"/>
+                <Button
+                    android:id="@+id/btn_suggest_sticker_finish"
+                    android:layout_below="@+id/edit_text_suggest_sticker_finish"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Suggest"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp" />
+                <Button
+                    android:id="@+id/btn_suggest_sticker_cancel_finish"
+                    android:layout_below="@+id/edit_text_suggest_sticker_finish"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Cancel"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40">
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentBottom="true">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
+

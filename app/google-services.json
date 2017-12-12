@@ -1,0 +1,102 @@
+{
+  "project_info": {
+    "project_number": "901417566407",
+    "firebase_url": "https://palpic-6af26.firebaseio.com",
+    "project_id": "palpic-6af26",
+    "storage_bucket": "palpic-6af26.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901417566407:android:03302751eda336db",
+        "android_client_info": {
+          "package_name": "com.allyouneedapp.palpicandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901417566407-nldm8752pf9k4blj4o9c0872n70b43sj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.allyouneedapp.palpicandroid",
+            "certificate_hash": "A0E1CC96DEA2F94AABEF9969CBE9EB52BD92C65A"
+          }
+        },
+        {
+          "client_id": "901417566407-f8mghhmoeur6b0prcdrra77m8f42513p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArquFz1HnNRhk3SxWng8iQ-SI0PPACfLQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901417566407:android:b007d327c2cd3657",
+        "android_client_info": {
+          "package_name": "com.allyouneedapp.palpicandroidfree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901417566407-ke3g1ngtekh4fv6a7aesrv49h3j2o2pv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.allyouneedapp.palpicandroidfree",
+            "certificate_hash": "A0E1CC96DEA2F94AABEF9969CBE9EB52BD92C65A"
+          }
+        },
+        {
+          "client_id": "901417566407-f8mghhmoeur6b0prcdrra77m8f42513p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArquFz1HnNRhk3SxWng8iQ-SI0PPACfLQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901417566407-ti7pm5olfkngoju0r2pc4pjjqpse5jgu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.allyouneedapp.palpicfree",
+                "app_store_id": "1174192875"
+              }
+            },
+            {
+              "client_id": "901417566407-f8mghhmoeur6b0prcdrra77m8f42513p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
